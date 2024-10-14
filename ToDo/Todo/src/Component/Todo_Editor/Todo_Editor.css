@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+
+    --Main-Text-Opacity: rgba(221, 221, 221, 0.5);
+    --Main-Text: #DDDDDD;
+    --Sec-Text-Opacity: rgba(47, 62, 138, 0.5);
+    --Sec-Bg: #0C0C0F;
+    --Active-Btn: #1E1E26;
+    --Main-Bg: #050609;
+    --Save-Btn: #2F3E8A;
+
+}
+
+
+.Editor{
+    /* width: 100%; */
+    padding: 20px 50px;
+    display: block;
+    flex-basis: 85%;
+}
+
+.Editor-Div{
+    width: 100%;   
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    max-height: 20%;
+}
+
+input.Title{
+    color: var(--Main-Text);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: clamp(20px, 5vw, 25px);
+    flex: 1;
+}
+
+input.Title:focus{
+    border: none;
+}
+
+
+.fa-floppy-disk{
+    color: var(--Main-Text);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.Description-Div{
+    width: 100%;
+    height: 50%;
+    border-top: 2px solid var(--Border);
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+textarea{
+    color: var(--Main-Text);
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(15px, 5vw, 20px);
+    height: 100%;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    resize: none;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+textarea:focus{
+    border: 2px solid var(--Border);
+}
+
+.Editors-Menus-Div{
+    width: 70%;
+    margin-inline: auto !important;
+    border-radius: 20px;
+    background-color: var(--Sec-Bg);
+    min-height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .Editors-Menus-Div{
+        width: 100%;
+    }
+
+    .Editor{
+        flex-basis: 100%;
+        padding: 20px;
+    }
+    
+}

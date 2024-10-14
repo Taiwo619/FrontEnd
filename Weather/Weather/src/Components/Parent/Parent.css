@@ -1,0 +1,21 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    max-width: 90%;
+    margin-inline: auto;
+    padding: 40px 20px;
+}
+
+@media screen and (max-width: 768px){
+
+    .parent{
+        max-width: 100%;
+    }
+    
+}

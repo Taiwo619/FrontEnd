@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Font Awesome Click Event</title>
+</head>
+<body>
+    <div id="icon-container"></div>
+
+    <script>
+        // Create and append the icon
+        const iconContainer = document.getElementById("icon-container");
+        const icon = document.createElement("i");
+        icon.classList.add("fa-solid", "fa-pen-to-square");
+        icon.addEventListener("click", () => {
+            console.log("Edit icon clicked")});
+        iconContainer.appendChild(icon);
+
+        // // Add click event listener
+        // document.addEventListener("click", function(event) {
+        //     if (event.target.classList.contains("fa-pen-to-square")) {
+        //         console.log("Icon clicked!");
+        //     }
+        // });
+    </script>
+</body>
+</html>

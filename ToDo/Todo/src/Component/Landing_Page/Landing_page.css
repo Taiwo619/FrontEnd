@@ -1,0 +1,226 @@
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+
+    --Main-Text-Opacity: rgba(221, 221, 221, 0.5);
+    --Main-Text: #DDDDDD;
+    --Sec-Text-Opacity: rgba(47, 62, 138, 0.5);
+    --Sec-Bg: #0C0C0F;
+    --Active-Btn: #1E1E26;
+    --Main-Bg: #050609;
+    --Save-Btn: #2F3E8A;
+
+}
+
+
+.Landing_Page{
+    flex-basis: 85%;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: var(--Main-Bg);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    position: relative;
+}
+
+.Landing_Div{
+    width: 100%;
+}
+
+
+.Landing-page-title{
+    font-size: clamp(25px, 5vw, 45px);
+    color: var(--Main-Text-Opacity);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.Landing-page-title span{
+    color: var(--Sec-Text-Opacity);
+}
+
+.Add-Task{
+    background-color: var(--Sec-Bg);
+    color: var(--Main-Text);
+    padding: 15px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(15px, 5vw, 20px);
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin-inline: auto;
+    border: none;
+    outline: none;
+    transition: 0.5s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.Add-Task:hover{
+    background-color: var(--Active-Btn);
+}
+
+.fa-bars{
+    color: var(--Main-Text);
+    left: 5%;
+    top: 5%;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+}
+
+
+.write-task{
+    position: absolute;
+    flex-direction: column;
+    gap: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--Sec-Bg);
+    width: 600px;
+    max-width: 90%;
+    display: none;
+    padding: 20px;
+    margin-inline: auto;
+   
+}
+
+
+.open{
+    display: block;
+    animation-name: open;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 1000;
+   
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.close{
+    animation-name: close;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: -1;
+   
+}
+
+
+@keyframes close {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+}
+
+
+.task-grp{
+    margin: 20px 0;
+    width: 100%;
+}
+
+label{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--Main-Text);
+}
+
+/* ::placeholder{
+    color: var(--text);
+} */
+
+input{
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: var(--Main-Bg);
+    min-height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: var(--Main-Text);
+}
+
+input.discription{
+    min-height: 50px;
+}
+
+input:focus{
+    border: 1px solid var(--Save-Btn);
+}
+
+
+
+.task-btns{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.cancel-btn, .save-btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--Main-Bg);
+    color: var(--Main-Text);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.save-btn{
+    background-color: var(--Save-Btn);
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .Landing_Page{
+        flex-basis: 100%;
+    }
+
+    .fa-bars{
+        display: block;
+    }
+    
+}

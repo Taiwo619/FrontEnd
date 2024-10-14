@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --text: #D7CEDE;
+    --div: rgba(6, 0, 41, 0.5);
+    --hover: rgba(6, 0, 41, 0.9);
+    --error_div: rgba(77, 1, 1, 0.8);
+    --error_text: #FFDBDB;
+}
+
+.Navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Search-div{
+    width: 35%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    background-color: var(--div);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-bottom: 4px solid var(--hover);
+
+    margin-bottom: 20px;
+}
+
+.Error-div{
+    width: 35%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    background-color: var(--error_div);
+    padding: 15px 20px ;
+    justify-content: center;
+    border-radius: 5px;
+    display: none;
+}
+
+
+.error-text{
+    font-family: poppins, sans-serif;
+    color: var(--error_text);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.search{
+    border: none;outline: none;
+    background-color: transparent;
+    flex: 1;
+    padding: 5px;
+    color: var(--text);
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.fa-magnifying-glass{
+    font-size: 20px;
+    color: var(--text);
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.fa-magnifying-glass:hover{
+    background-color: var(--hover);
+}
+
+
+@media screen and (max-width: 768px){
+
+    .Search-div{
+        width: 90%;
+    }
+
+    .Error-div{
+        width: 90%;
+    }
+    
+}

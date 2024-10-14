@@ -1,0 +1,32 @@
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.hamburger-1,
+.hamburger-2 {
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: red;
+    transition: 0.5s ease;
+}
+
+.hamburger-2 {
+    background-color: red;
+    margin-top: 7px;
+}
+
+.open .hamburger-1 {
+    transform: rotate(45deg);
+    background-color: red;
+}
+
+.open .hamburger-2 {
+    transform: rotate(-45deg);
+    background-color: red;
+    margin-top: -4px;
+}

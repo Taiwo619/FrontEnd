@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture your dreams</title>
+
+
+
+
+    <!--------------- Favicon ------------------->
+
+    <link rel="shortcut icon" type="image/x-icon" href="Img/faviconn.png">
+
+
+
+
+    <!--------------- font awesome link ------------------->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+    <!--------------- Css link ------------------->
+
+    <link rel="stylesheet" href="index.css">
+
+
+
+
+
+    <!--------------- Javascript link ------------------->
+
+
+    <script  defer src="index.js"></script>
+
+
+
+
+    <!---------------------- Google fonts ----------------------->
+
+
+
+    <!------------- poppins font -------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+
+
+    <!------------- Bodoni Moda font -------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="wrapper">
+
+
+        <!------------- Nav -------------->
+
+
+        <div class="Nav">
+
+            <div class="nav-bar">
+
+                <img src="Img/logo.svg">
+
+
+                <div class="nav-linkss" id="nav-links" >
+    
+                    <a class="nav-links active-link" onclick="getlink(event,'Home')" id="default">Home</a>
+                    <a class="nav-links" onclick="getlink(event,'catalogue')" >Catalogue</a>
+                    <a class="nav-links" onclick="getlink(event,'shop')" >Shop</a>
+                    <a class="nav-links" onclick="getlink(event,'AboutUs')" >About Us</a>
+    
+                </div>
+    
+
+    
+                <!------------- Hamburger -------------->
+    
+                <div class="hamburger" onclick="toggleMenu()">
+    
+                    <div class="hamburger-1"></div>
+                    <div class="hamburger-2"></div>
+    
+                </div>
+    
+            </div>
+
+        </div>
+
+
+
+       
+
+        <div id="Home">
+
+
+            <!------------- Landing page image added because of media query -------------->
+
+
+            <div class="landing-page">
+
+                <div class="landing-page-child">
+    
+                    <p class="furnish-text">Furnishing</p>
+                    <p class="dream-text">Your Dreams</p>
+    
+                </div>
+    
+            </div>
+
+        </div>
+
+       
+
+
+
+
+
+        <!------------- catalogue parent div section  which carries the id catalogue  -------------->
+
+
+
+
+
+        <div id="catalogue">
+
+
+            <!------------- catalogue -------------->
+
+            <div class="Catalogue">
+
+                <p class="catalogue-text">Our Catalogue</p>
+
+            </div>
+
+
+
+            <!------------- flex basis 1 -------------->
+
+
+            <div class="flex-basis-1">
+
+                <div class="flex-basis-1-img">
+
+                    <img class="img-move-right" src="Img/Artboard 38.png">
+
+                </div>
+
+                
+                <div class="flex-basis-1-text">
+
+                    <p class="sittin-room">Modern <br>Sitting <br><span>Room</span></p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <!------------- flex basis 2 -------------->
+
+
+            <div class="flex-basis-2">
+
+                
+                <div class="flex-basis-2-text">
+
+                    <p class="Kitchen">Modern <br><span>Kitchen</span></p>
+
+                </div>
+
+
+                <div class="flex-basis-2-img">
+
+                    <img class="flex-base-2-img" src="Img/kitchen.png">
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!------------- Section-3 image added because of media query/ catalogue continues  -------------->
+
+            <div class="sec-3-parent">
+
+                <div class="lamp-stand-text-div">
+
+                    <p class="lamp-stand-text">Lamp <br> <span>Stand</span></p>
+                    
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <!------------- My shop section  -------------->
+
+
+        <div id="shop">
+
+
+            <div class="Our-Latests-products-div">
+
+                <p class="Our-Latests-products">Our Latest products</p>
+
+            </div>
+
+
+
+            <!------------- My shop parent grid carrying display grid   -------------->
+
+            <div class="shop-grid">
+
+
+
+
+                <!------------- My shop main children    -------------->
+
+                <div class="shop-grid-child">
+
+
+                    <img src="Img/shop-1.png">
+
+
+                    <div class="overlay">
+
+                        <i class="fa-solid fa-heart" onclick="like()" ></i>
+
+                        <i class="fa-solid fa-share-nodes"></i>
+
+                    </div>
+
+
+                    <div class="shop-info-div">
+
+                        <p class="product-name">Luxury Fabric Sofa</p>
+
+                        <p class="product-price">#1,400 000</p>
+
+                        <button class="buy-btn" type="button">Buy</button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="shop-grid-child">
+
+                    <img src="Img/shop-2.png">
+
+                    <div class="overlay">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <i class="fa-solid fa-share-nodes"></i>
+
+                    </div>
+
+
+                    <div class="shop-info-div">
+
+                        <p class="product-name">Luxury Kitchen</p>
+
+                        <p class="product-price">#2,400 000</p>
+
+                        <button class="buy-btn" type="button">Buy</button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="shop-grid-child">
+
+                    <img src="Img/lamp-replace.png">
+
+                    <div class="overlay">
+
+                        <i class="fa-solid fa-heart" onclick="like()" ></i>
+
+                        <i class="fa-solid fa-share-nodes"></i>
+
+                    </div>
+
+
+                    <div class="shop-info-div">
+                        
+                        <p class="product-name">Lamp Stand</p>
+
+                        <p class="product-price">#600 000</p>
+
+                        <button class="buy-btn" type="button">Buy</button>
+
+                    </div>
+
+                 
+
+                </div>
+
+
+
+                <div class="shop-grid-child">
+
+                    <img src="Img/tv-replace.png">
+
+                    <div class="overlay">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <i class="fa-solid fa-share-nodes"></i>
+
+                    </div>
+
+
+                    <div class="shop-info-div">
+                        
+                        <p class="product-name">Tv Stand</p>
+
+                        <p class="product-price">#1,000 000</p>
+
+                        <button class="buy-btn" type="button">Buy</button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!------------- see more button   -------------->
+
+
+            <button class="see-more-btn">Our product list</button>
+
+
+        </div>
+
+
+
+
+        <!------------- Why choose us -------------->
+
+        <div class="why-choose-us-flex">
+
+          <div class="why-choose-us-img">
+            <img src="Img/why-choose.png">
+          </div>
+
+
+          <div class="why-choose-us-text">
+
+                <div class="header-div">
+                    <p class="header-text">Why choose <br><span>us</span></p>
+                </div>
+
+                <div class="body-div">
+                    <p class="body-text"><span>Transparent Business Model</span><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas adipiscing elit. Maecenas porttitor congue massa </p>
+                </div>
+
+                <div class="body-div">
+                    <p class="body-text"><span>Client Satidfactory</span><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas adipiscing elit. Maecenas porttitor congue massa</p>
+                </div>
+
+                <div class="body-div">
+                    <p class="body-text"><span>Value for money</span><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas adipiscing elit. Maecenas porttitor congue massa</p>
+                </div>
+
+                <div class="body-div">
+                    <p class="body-text"><span>Value for money</span><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!------------- Footer Section -------------->
+
+        <div class="footer">
+
+            <a href="https://wa.me/+2348087852299" class="whatsapp-bubble" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <div class="footer-first-portion">
+    
+                <div class="footer-info">
+    
+                    <i class="fa-solid fa-phone"></i><p class="footer-text-1">0814 248 8515, 0808 785 2299</p>
+    
+                </div>
+    
+                <div class="footer-info">
+    
+                    <i class="fa-solid fa-house"></i><p class="footer-text-1">Abuja, Nigeria</p>
+    
+                </div>
+    
+            </div>
+    
+    
+            <div class="footer-second-portion">
+    
+                <p class="footer-text">Designed and developed by Taiwo Oluwatofunmi </p>
+    
+                <p id="footer-year"></p>
+    
+            </div>
+    
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

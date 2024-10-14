@@ -1,0 +1,31 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+
+    --Main-Text-Opacity: rgba(221, 221, 221, 0.5);
+    --Main-Text: #DDDDDD;
+    --Sec-Text-Opacity: rgba(47, 62, 138, 0.5);
+    --Sec-Bg: #0C0C0F;
+    --Active-Btn: #1E1E26;
+    --Main-Bg: #050609;
+    --Save-Btn: #2F3E8A;
+    --Border: #1D1D22;
+}
+
+
+
+.parent{
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    max-width: 2000px; /* Adjust this value as needed */
+    margin-left: auto;
+    margin-right: auto; /* Centers the element */
+}

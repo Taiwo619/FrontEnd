@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+     <!--------------- Favicon ------------------->
+
+     <link rel="shortcut icon" type="image/x-icon" href="Img/Favicon.png">
+
+
+     <!--------------- font awesome link ------------------->
+ 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+ 
+     <!-------------CSS link---------------->
+ 
+     <link rel="stylesheet" href="style.css">
+ 
+ 
+ 
+     <!-------------JS  link---------------->
+ 
+     <script defer  src="script.js"></script>
+ 
+ 
+ 
+     <!------------- poppins font -------------->
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ 
+     
+     
+     <!------------- Righeous font -------------->
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+
+    <!--Navbar-->
+
+
+    <div class="navbar">
+
+        <p id="greeting" class="navbar-text" ></p>
+            
+        <p id="time" class="navbar-text"></p>
+
+    </div>
+
+
+    <div class="Section-1">
+
+        <p class="Landing-text">Transforming ideas into<br>visual stories</p>
+
+    </div>
+
+
+    
+
+
+    <div class="Section-2">
+
+        <p class="my-name"> Taiwo Oluwatofunmi.</p>
+
+        <div class="About-Div">
+
+            <img  class="Dev-icon" src="Img/Wave.png">
+            <p class="about-text">I'm a front-end web developer passionate about creating intuitive user interface that enhance user experience with a strong focus on delivering clean and maintainable code. </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="Section-3">
+
+        <div class="skill-tab-div">
+
+            <button type="button" onclick="openskills(event, 'Skills')" id="default" class="skill-btn">skill</button>
+            <button type="button" onclick="openskills(event, 'Education')" class="skill-btn active-btn"  >Education</button>
+           
+        </div>
+
+
+        <div id="Skills" class="Skills-content" >
+
+            <div class="skills-content-child">
+
+                <li class="skill-type" >Creativity</li>
+                <li class="skill-type" >Layout Design</li>
+                <li class="skill-type" >Active Listening</li>
+                <li class="skill-type" >Typography</li>
+                <li class="skill-type" >Typography</li>
+                <li class="skill-type" >Attention to detail</li>
+                <li class="skill-type" >Problem Solving</li>
+
+            </div>
+
+
+        </div>
+
+
+        <div id="Education" class="Skills-content">
+            
+
+            <p class="school-type" >Training Institution Institution</p>
+            <p class="school-name" >Bizmarrow Technologies Abuja</p>
+            <p class="school-name" >Front End Web Development</p>
+            <p class="school-year" >March 2024 - July 2024</p>
+            
+        </div>
+
+
+    </div>
+
+
+
+     <!-- ------------ zoomed image Called with Javascript------------->
+
+                            
+     <div id="zoomed-image-container" class="zoomed-image-container">
+
+        <div class="zoomed-image-div"> 
+            <img id="zoomed-image" class="zoomed-image" src="">
+        </div>
+       
+        <p class="zoomed-image-name" id="zoomed-image-name"></p>
+
+        <button onclick="close_zoomed_image()" class="zoomed-image-close-btn" id="zoomed-image-close-btn">X</button>
+
+    </div>
+
+
+  
+
+    <!-- ------------section 4------------->
+
+    <div class="Section-4">
+
+    
+
+        <p class="my-works">My Projects</p>
+
+        <!-- ------------column------------->
+
+        <div class="sec-4-columns">
+
+        
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/jotter2.png">
+
+                <p id="zoomed-text">Jotter</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/bizcard-1a.png">
+
+                <p id="zoomed-text">Business card</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/bizcard-1b.png">
+
+                <p id="zoomed-text">Business card</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/flayer1a.png">
+
+                <p id="zoomed-text">Flyer</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/jotter-2.png">
+
+                <p id="zoomed-text">Jotter</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/sticker1b.png">
+
+                <p id="zoomed-text">Sticker</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/independence.png">
+
+                <p id="zoomed-text">Independence</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/debb-1.png">
+
+                <p id="zoomed-text">Debraj Poster</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/debb.png">
+
+                <p id="zoomed-text">Debraj Poster</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/kemox-1.png">
+
+                <p id="zoomed-text">Business E-flyer</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/tb-busines.png">
+
+                <p id="zoomed-text">Business-Card</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/mistreal.png">
+
+                <p id="zoomed-text">Mistreal Program</p>
+
+                <div class="overlay"></div>
+
+            </div>
+
+
+
+            <div onclick="zoom_image(this)" class="sec-4-column-child">
+
+                <img src="Img/randodom-biz.png">
+
+                <p id="zoomed-text">Business-Card</p>
+
+                <div class="overlay"></div>
+
+            </div>
+           
+
+        </div>
+
+        
+    </div>
+
+
+    <div class="Section-5">
+
+        <p class="contact-me">Contact Me</p>
+
+        <p class="contact-me-text">need to get some work done? no problem, let's connect</p>
+
+
+        <div class="social-media-icon-container">
+
+
+            <a href="mailto:taiwotimothy834@gmail.com"><img src="Img/gmail.png" class="social-media-icons"></a>
+            <a href="https://wa.me/+2348087852299"><img src="Img/whatsapp.png" class="social-media-icons"></a>
+
+           
+        </div>
+
+        <a href="Taiwo Oluwatofunmi.pdf" download="Taiwo Oluwatofunmi.pdf"><button type="button" class="cv-button">Download CV</button></a>
+
+
+    </div>
+
+
+    <!--footer-->
+
+
+    <div class="footer">
+
+        <div class="footer-first-portion">
+
+            <div class="footer-info">
+                <i class="fa-solid fa-phone"></i><p class="footer-text">0814 248 8515, 0808 785 2299</p>
+            </div>
+
+            <div class="footer-info">
+                <i class="fa-solid fa-house"></i><p class="footer-text">Abuja, Nigeria</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-second-portion">
+
+            <p class="footer-text">Designed and developed by Taiwo Oluwatofunmi </p>
+            <p id="footer-year"></p>
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

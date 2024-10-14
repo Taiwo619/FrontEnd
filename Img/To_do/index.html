@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-DO List</title>
+
+    <!--------------- Favicon ------------------->
+
+    <link rel="shortcut icon" type="image/x-icon" href="Img/client pic.png">
+
+
+    <!--------------- font awesome link ------------------->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-------------CSS link---------------->
+
+    <link rel="stylesheet" href="index.css">
+
+
+
+    <!-------------JS  link---------------->
+
+    <script defer  src="index.js"></script>
+
+
+
+    <!------------- poppins font -------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <!--------Nav bar------->
+
+    <nav>
+
+        <p id="Greeting"></p>
+
+        <!----theme togler  -->
+
+        <img onclick="theme_toggler()" id="theme-icon" src="dark.png">
+
+    </nav>
+
+
+
+    <!------write a task div------>
+
+
+    <div id="add-task-dialogue" class="write-a-task">
+
+        <p>add your task </p>
+
+
+        <div class="task-grp">
+
+            <label for="Task Name" >Task Name</label>
+
+            <input
+            id="TaskName"
+            name="Task Name"
+            type="text"
+            placeholder="your task name"
+            />
+
+        </div>
+
+        <div class="task-grp">
+
+            <label for="Task Name" >Description</label>
+
+            <input 
+            id="Task-Description"
+            class="discription"
+            name="Task Name"
+            type="text"
+            placeholder="Describe your task"
+            />
+
+        </div>
+
+        <div class="task-btns">
+            <button id="save-btn" type="submit">Save</button>
+            <button id="cancel-btn" type="submit">Cancel</button>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="body-wrapper">
+
+
+        <!-------header section-------->
+
+
+        <div class="header-container">
+
+            <p>
+                add your task
+            </p>
+
+            <i id="add-task" class="fa-solid fa-plus"></i>
+
+        </div>
+
+
+        <!-------content added with JS -------->
+
+        <div id="main-container" class="main-container"></div>
+
+    </div>
+   
+    
+</body>
+</html>

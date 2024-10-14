@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!--------------- font awesome link ------------------->
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;  padding: 0;
+        }
+        
+        .main-container{
+            max-width: 900px;
+            background-color: black;
+            padding: 20px;
+            margin-inline: auto;
+            border-radius: 40px;
+        }
+
+
+        .child-container{
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: blue;
+            border-radius: 30px;
+            margin: 20px 0;
+        }
+
+
+        .text-divs{
+            flex-grow: 1;
+            max-height: 100px;
+        }
+
+
+        .Main-task, .Sub-task{
+            font-family: poppins, sans-serif;
+            color: black;
+            font-size: 15px;
+        }
+
+        .Main-task{
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+
+        .icon-divs{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 90;
+            padding: 5px;
+            cursor: pointer;
+            background-color: gray;
+        }
+
+
+        .fa-trash, .fa-pen{
+            font-size: 20px;
+            cursor: pointer !important; /* Add this line */
+            padding: 10px;
+        }
+        
+
+
+        .fa-trash{
+            color: red;
+        }
+
+
+        .fa-pen{
+            color: black;
+            font-size: 20px;
+            cursor: pointer !important; /* Add this line */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="main-container" class="main-container"></div>
+
+    <div class="task-grp">
+
+        <label for="Task Name" >Description</label>
+
+        <input 
+        id="Task-Description"
+        class="discription"
+        name="Task Name"
+        type="text"
+        placeholder="Describe your task"
+        />
+
+    </div>
+
+    <div class="task-btns">
+        <button id="save-btn" type="submit">Save</button>
+        <button id="cancel-btn" type="submit">Cancel</button>
+    </div>
+
+    
+</body>
+
+<script>
+        const save_btn = document.getElementById("save-btn");	
+
+        const parent_container = document.getElementById("main-container");
+
+
+        save_btn.addEventListener("click", () =>{
+
+
+            const Task_Description = document.getElementById("Task-Description").value;
+
+
+                ///// create a chiled conatiner, add class and append to parent
+
+                const child_container = document.createElement("div");
+                child_container.classList.add("child-container");
+                parent_container.appendChild(child_container);
+
+
+                //create text divs and add class and append to child
+
+                const text_divs = document.createElement("div");
+                text_divs.classList.add("text-divs");
+                child_container.appendChild(text_divs);
+
+
+                const Sub_task = document.createElement("p");
+                Sub_task.textContent = Task_Description;
+                Sub_task.classList.add("Sub-task");
+                text_divs.appendChild(Sub_task);
+
+
+
+                //// create icondiv
+
+                const icon_container = document.createElement("div");
+                icon_container.classList.add("icon-divs");
+                child_container.appendChild(icon_container);
+                icon_container.addEventListener("click", () =>{alert("nice one")})
+
+
+
+
+                //// create icons
+
+                const edit_icon = document.createElement("i");
+                edit_icon.classList.add("fa-solid", "fa-pen");
+                icon_container.appendChild(edit_icon);
+                edit_icon.addEventListener("click", () => {
+                    console.log("Edit icon clicked")});
+
+
+                const delete_icon = document.createElement("i");
+                delete_icon.classList.add("fa-solid", "fa-trash");
+                icon_container.appendChild(delete_icon);
+                delete_icon.addEventListener("click", () => {
+                    console.log("Edit icon clicked")});
+
+
+
+                //// clear dispaly after creation
+
+                document.getElementById("Task-Description").value = "";
+                
+            
+
+        }); 
+</script>
+</html>

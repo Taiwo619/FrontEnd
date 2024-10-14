@@ -1,0 +1,1127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --primary_bg1: #FFFCFC;
+    --primary_bg2: #0E0804;
+    --primary_bg3:rgba(217, 217, 217, 0.2);
+    --primary_bg4:#EFEFEF;
+    --stroke: #DEDEDE;
+    --text_bg1: #FFFCFC;
+    --text_bg2: #6E0101;
+    --text_bg3: rgba(217, 217, 217, 0.5)
+    --blur-1: rgba(14, 8, 4, 0.8);
+    --blur-2: rgba(255, 252, 252, 0.7);
+    --watsapp: #25D366;
+    --text_bg4: #D9D9D9;
+}
+
+
+.wrapper{
+    width: 100%;
+}
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*     Navbar
+/*  ///////////////////////////////////  */
+
+
+.Nav{
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    position: fixed;
+    background-color: var(--blur-2);
+    backdrop-filter: blur(5px);
+    height: 80px;
+}
+
+.nav-bar{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Nav img{
+    width: 50px;
+}
+
+
+
+.nav-linkss{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.nav-linkss a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: var(--primary_bg2);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+
+.nav-linkss a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary_bg2);
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.nav-linkss a.active-link::after{
+    width: 30%;
+}
+
+
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+
+.hamburger-1,
+.hamburger-2 {
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--primary_bg2);
+    transition: 0.5s ease;
+    display: none;
+}
+
+
+
+.hamburger-2 {
+    background-color:var(--primary_bg2);
+    margin-top: 7px;
+}
+
+
+
+.open .hamburger-1 {
+    transform: rotate(45deg);
+    background-color:var(--primary_bg2);
+}
+
+
+
+.open .hamburger-2 {
+    transform: rotate(-45deg);
+    background-color:var(--primary_bg2);
+    margin-top: -4px;
+}
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*      Landing Page
+/*  ///////////////////////////////////  */
+
+
+#Home{
+    width: 100%;
+}
+
+
+.landing-page{
+    margin-top: 80px;
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(Img/desktop_landing.png); background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.landing-page-child{
+    position: absolute;
+    width: 70%;
+    height: 75%;
+    background-color: var(--blur-2);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.furnish-text{
+    color: var(--primary_bg2);
+    font-size: clamp(40px, 5vw, 90px);
+    font-family:"Bodoni Moda", serif;
+    font-weight: bold;
+    animation-name: moveup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.dream-text{
+    color: var(--primary_bg2);
+    font-size: clamp(20px, 5vw, 40px);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    animation-name: moveup;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+
+@keyframes moveup {
+
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+
+
+
+
+/*  ///////////////////////////////////  */
+/*    CATALOGUE SECTION
+/*  ///////////////////////////////////  */
+
+
+
+
+#catalogue{
+    width: 100%;
+}
+
+.Catalogue{
+    background-color: var(--primary_bg2);
+    padding: 10px 20px;
+}
+
+
+
+.catalogue-text{
+    color: var(--text_bg1);
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-wrap: balance;
+}
+
+
+
+
+.flex-basis-1{
+    width: 100%;
+    display: flex;
+    padding: 50px 20px;
+    gap: 10px;
+}
+
+
+.flex-basis-1-img{
+    flex-basis: 65%;
+    overflow: hidden;
+}
+
+
+.flex-basis-1-img img{
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+
+.flex-basis-1-text{
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary_bg3);
+}
+
+
+
+.sittin-room{
+    font-family:"Bodoni Moda", serif;
+    font-weight: bold;
+    font-size: clamp(20px, 5vw, 60px);
+    opacity: 0;
+}
+
+
+
+.sittin-room span{
+    color: var(--text_bg2);
+}
+
+
+
+
+/*  ///////////////////////////////////  */
+/*      animations for the first flex basis
+/*  ///////////////////////////////////  */
+
+.move-right-anim {
+    animation-name: move-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-right {
+
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+
+.flex-base-1-text-anim{
+
+    animation-name: moveleft;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes moveleft {
+
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*   flex basis 2
+/*  ///////////////////////////////////  */
+
+
+
+.flex-basis-2{
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+
+.flex-basis-2-img{
+    flex-basis: 65%;
+    overflow: hidden;
+}
+
+
+.flex-basis-2-img img{
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+
+.flex-basis-2-text{
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary_bg3);
+}
+
+
+
+.Kitchen{
+    font-family:"Bodoni Moda", serif;
+    font-weight: bold;
+    font-size: clamp(20px, 5vw, 60px);
+    opacity: 0;
+}
+
+
+
+.Kitchen span{
+    color: var(--text_bg2);
+    display: block;
+}
+
+
+
+
+/*  ///////////////////////////////////  */
+/*      animations for the second flex basis
+/*  ///////////////////////////////////  */
+
+.flex-base-2-move-right {
+    animation-name: move-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-right {
+
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+
+.flex-base-2-move-left{
+
+    animation-name: moveleft;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes moveleft {
+
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*    Section-3 */
+/*  ///////////////////////////////////  */
+
+
+.sec-3-parent{
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(Img/desktop-sec-3.png); background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+
+
+.lamp-stand-text-div{
+    position: absolute;
+    width: 70%;
+    height: 75%;
+    background-color: var(--blur-2);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+}
+
+
+
+.lamp-stand-text{
+    color: var(--primary_bg2);
+    font-size: clamp(40px, 5vw, 90px);
+    font-family:"Bodoni Moda", serif;
+    font-weight: bold;
+}
+
+.lamp-stand-text span{
+    color: var(--text_bg2);
+}
+
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*      animations for the second flex basis
+/*  ///////////////////////////////////  */
+
+
+.sec-3-animation{
+    animation-name: sec-3-scale;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sec-3-scale {
+
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+
+
+
+.lamp-stand-text-div-animation{
+    animation-name: lamp-stand-reveal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+
+@keyframes lamp-stand-reveal {
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
+}
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*   styling for shop section */
+/*  ///////////////////////////////////  */
+
+
+
+
+#shop{
+    width: 100%;
+}
+
+
+
+.Our-Latests-products-div{
+
+    background-color: var(--primary_bg2);
+    padding: 10px 20px;
+
+}
+
+
+
+.Our-Latests-products{
+    color: var(--text_bg1);
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-wrap: balance;
+}
+
+
+
+.shop-grid{
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+
+.shop-grid-child{
+    min-height: 300px;
+    /* background-color: red; */
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-grid-child img{
+    object-fit: cover;
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+}
+
+
+.overlay{
+    position: absolute;
+    background-color: rgba(235, 235, 237, 0.9);
+    width: 50Px;
+    border-radius: 10px;
+    height: 40%;
+    top:5%;
+    right: -20%;
+    transition: 0.7s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 5px;
+    
+}
+
+.shop-grid-child:hover .overlay{
+    right: 10%;
+}
+
+.shop-grid-child:focus .overlay{
+    right: 10%;
+
+}
+
+.overlay i{
+    text-align: center;
+    font-size: 20px;
+}
+
+.fa-share-nodes{
+    color: black;
+}
+
+.heart-animation{
+    animation-name: heart-scale;
+    animation-duration: 0.5s;
+}
+
+@keyframes heart-scale {
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+    
+}
+
+
+
+.shop-info-div{
+    width: 100%;
+}
+
+
+.product-name{
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(22px, 5vw, 25px);
+    color: var(--primary_bg2);
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.product-price{
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(22px, 5vw, 25px);;
+    color: var(--text_bg2);
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.buy-btn{
+    border: none;
+    outline: none;
+    background-color: var(--text_bg2);
+    color: var(--text_bg1);
+    padding: 10px 15px;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+
+
+
+.see-more-btn{
+
+    border: 1.5px solid var(--text_bg2);
+    outline: none;
+    background-color: transparent;
+    color: var(--text_bg2);
+    padding: 10px 15px;
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.see-more-btn:hover{
+    background-color: var(--text_bg2);
+    color: var(--text_bg1);
+}
+
+/* .see-more-btn:focus{
+    background-color: var(--text_bg2);
+    color: var(--text_bg1);
+} */
+
+
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*    Why choose us */
+/*  ///////////////////////////////////  */
+
+.why-choose-us-flex{
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+    display: flex;
+}
+
+.why-choose-us-img{
+    flex-basis: 45%;
+}
+
+.why-choose-us-img img{
+    width: 100%;
+   
+}
+
+
+.why-choose-us-text{
+    flex-basis: 55%;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.header-div{
+    width: 100%;
+    background-color: var(--primary_bg3);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.header-text{
+    color: var(--primary_bg2);
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.header-text span{
+    color: var(--text_bg2);
+}
+
+.body-div{
+    padding: 20px;
+    width: 100%;
+    background-color: var(--primary_bg3);
+    margin-bottom: 10px;
+}
+
+.body-text{
+    color: var(--primary_bg2);
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+
+.body-text span{
+    font-weight: 600;
+    color: var(--text_bg2);
+}
+
+
+
+/*  ///////////////////////////////////  */
+/*   Review Header */
+/*  ///////////////////////////////////  */
+
+.review-header{
+    width: 100%;
+    padding: 20px;
+}
+
+.what-our-customer-says-text{
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    text-wrap: balance;
+    color: var(--primary_bg2);
+    cursor: pointer;
+    transition: 2s ease;
+    width: fit-content;
+    position: relative;
+    padding: 5px 0;
+}
+
+
+.what-our-customer-says-text::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary_bg2);
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.what-our-customer-says-text:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*    Footer */
+/*  ///////////////////////////////////  */
+
+.footer{
+    backdrop-filter: blur(10px);
+    width: 100%;
+    display: flex;
+    background-color: var(--primary_bg2);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 20px;
+    position: relative;
+}
+    
+
+
+
+.footer-first-portion{
+    padding-bottom:10px ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+}
+
+
+
+.fa-phone, .fa-house{
+    width: 20px;
+    aspect-ratio: 1;
+    color: var(--text_bg1);
+}
+
+
+
+.footer-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+.footer-second-portion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+#footer-year{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    color: var(--text_bg1);
+}
+
+
+.footer-text{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    color: var(--text_bg1);
+    text-align: center;
+}
+
+.footer-text-1{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    color: var(--text_bg1);
+}
+
+.fa-whatsapp{
+    color: var(--text_bg1);
+    background-color: var(--watsapp);
+    border-radius: 50%;
+    padding: 20px;
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    box-shadow: 0 0 10px rgb(65, 65, 65);
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.fa-whatsapp:hover{
+    padding: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  ///////////////////////////////////  */
+/*    Media Queries */
+/*  ///////////////////////////////////  */
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .nav-linkss{
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        background-color: var(--primary_bg1);
+        width: 100%;
+        right: 0;
+        height: 100vh;
+        padding: 20px;
+        border-top: 1px solid rgb(217, 216, 216);
+        transition: 0.5s;
+    }
+
+    .nav-linkss a{
+        margin-bottom: 20px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .hamburger-1,
+    .hamburger-2{
+        display: block;
+    }
+
+    .landing-page{
+        min-height: 700px;
+        background-image: url(Img/mobile_landing.png); background-size: cover;
+    }
+
+    .landing-page-child{
+        width: 90%;
+    }
+
+    .sec-3-parent{
+        background-image: url(Img/mobile-sec-3.png); background-size: cover;
+    }
+    
+
+    .lamp-stand-text-div{
+        width: 90%;
+    }
+
+
+
+    .flex-basis-1{
+        flex-direction: column;
+    }
+
+    .flex-basis-2{
+        flex-direction: column;
+    }
+
+
+
+    .flex-basis-1-img{
+        flex-basis: 100%;
+        overflow: hidden;
+    }
+    
+    
+    .flex-basis-1-text{
+        flex-basis: 100%;
+        padding: 10px 20px;
+    }
+
+
+
+    .flex-basis-2-img{
+        flex-basis: 100%;
+        overflow: hidden;
+    }
+    
+    
+    .flex-basis-2-text{
+        flex-basis: 100%;
+        padding: 10px 20px;
+    }
+
+
+
+    
+    .sittin-room br {
+        display: none;
+    }
+
+    .sittin-room span {
+        display: inline;
+    }
+
+
+
+    .Kitchen br {
+        display: none;
+    }
+
+    .Kitchen span {
+        display: inline;
+    }
+
+    .why-choose-us-img{
+        flex-basis: 0
+    }
+    
+    .why-choose-us-img img{
+        display: none;
+       
+    }
+    
+    
+    .why-choose-us-text{
+        flex-basis: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    
+
+    .footer{
+        padding: 20px;
+    }
+
+
+    .footer-top{
+        width: 100%;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        /* margin-bottom: 40px; */
+    }
+    
+    .footer-flex-1{
+        flex-basis: 100%;
+    }
+    
+    .footer-flex-2{
+        flex-basis: 100%;
+    }
+    
+    .footer-flex-3{
+        flex-basis: 100%;
+    }
+    
+    
+    
+
+}

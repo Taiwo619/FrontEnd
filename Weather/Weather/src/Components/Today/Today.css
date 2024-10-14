@@ -1,0 +1,56 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --text: #D7CEDE;
+    --div: rgba(6, 0, 41, 0.5);
+    --hover: rgba(6, 0, 41, 0.9);
+    --divMain:rgba(255, 255, 255, 0.1);
+}
+
+
+.Today{
+    width: 100%;
+    /* min-height: 200px; */
+    /* background-color: var(--divMain); */
+    /* border-radius: 20px; */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.Param-div{
+    min-width: 220px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    background-color: var(--divMain);
+    border-radius: 20px;
+}
+
+.parameter{
+    font-size: 15px;
+    color: var(--text);
+    font-family: poppins, sans-serif;
+}
+
+.parameter-figure{
+    font-size: 30px;
+    color: var(--text);
+    font-weight: 600;
+    font-family: poppins, sans-serif;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .Param-div{
+        min-width: 100%;
+    }
+    
+}
