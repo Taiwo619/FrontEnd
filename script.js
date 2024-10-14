@@ -114,7 +114,7 @@ function Intersection_Observer(className, animationClass) {
 // Call the function for each set of elements you want to observe
 Intersection_Observer("Graphic", "Project-animation");
 Intersection_Observer("ToDo", "Project-animation");
-Intersection_Observer("G-port", "Project-animation");
+Intersection_Observer("Weather", "Project-animation");
 
 
 
